@@ -1,0 +1,27 @@
+{
+  "number": 3,
+  "status": "failure",
+  "timestamp": 1524565305,
+  "duration": 11.69409,
+  "sha": "f0db8c98222b43b9874ee1a2b8a31d42b10f19e4",
+  "artifacts": [
+    {
+      "type": "fastlane.verbose.log",
+      "reference": "e78cd518-3a55-4061-9920-04575963ff69/3/fastlane.verbose.log/fastlane.verbose.log",
+      "provider": {
+        "class_name": "FastlaneCI::LocalArtifactProvider"
+      },
+      "id": "2d7d84d3-af97-4766-8bdf-a103952e3f36"
+    },
+    {
+      "type": "fastlane.log",
+      "reference": "e78cd518-3a55-4061-9920-04575963ff69/3/fastlane.log/fastlane.log",
+      "provider": {
+        "class_name": "FastlaneCI::LocalArtifactProvider"
+      },
+      "id": "768b8f4a-1e20-4a61-8693-0613c31cfd00"
+    }
+  ],
+  "description": "Build failed",
+  "trigger": "manual"
+}
