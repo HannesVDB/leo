@@ -102,13 +102,7 @@ private_lane :build do |options|
   build_app(
     workspace:            WORKSPACE,
     scheme:               SCHEME,
-    configuration:        options[:configuration],
-    export_options: {
-                          method: "enterprise",
-                          provisioningProfiles: {
-                                                  "com.icapps.leo" => "iCapps Wildcard"
-                                                }
-                    }
+    configuration:        options[:configuration]
           )
 end
 
