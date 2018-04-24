@@ -115,7 +115,7 @@ end
 ##################
 
 def export_options_for(configuration)
-  if configuration == :beta
+  if configuration == :debug
     {
       method: 'enterprise',
       provisioningProfiles: {
