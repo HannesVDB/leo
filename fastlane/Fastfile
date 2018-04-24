@@ -43,7 +43,9 @@ lane :beta do
   increment_build_number
   # Build the application with the given configuration.
   build(
-    configuration: 'Debug'
+    configuration: 'Debug',
+    export_options: export_options_for :debug
+
     )
   # When everything succeeds, commit and push the changes.
   commit_tag_and_push
@@ -107,6 +109,21 @@ private_lane :build do |options|
   )
 end
 
+
+##################
+### Properties ###
+##################
+
+def export_options_for(configuration)
+  if configuration == :beta
+    {
+      method: 'enterprise',
+      provisioningProfiles: {
+        "com.icapps.leo" => "iCapps Wildcard"
+      }
+    }
+  end
+end
 
 #################
 ### CALLBACKS ###
