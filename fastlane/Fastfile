@@ -43,9 +43,8 @@ lane :beta do
   increment_build_number
   # Build the application with the given configuration.
   build(
-    configuration: 'Debug',
-    export_options: export_options_for :debug
-    )
+        configuration: 'Debug'
+      )
   # When everything succeeds, commit and push the changes.
   commit_tag_and_push
 end
@@ -107,27 +106,10 @@ private_lane :build do |options|
     export_options: {
                           method: "enterprise",
                           provisioningProfiles: {
-                                                  "com.example.bundleid" => "Provisioning Profile Name",
-                                                  "com.example.bundleid2" => "Provisioning Profile Name 2"
+                                                  "com.icapps.leo" => "iCapps Wildcard"
                                                 }
                     }
           )
-end
-
-
-##################
-### Properties ###
-##################
-
-def export_options_for(configuration)
-  if configuration == :debug
-    {
-      method: 'enterprise',
-      provisioningProfiles: {
-        "com.icapps.leo" => "iCapps Wildcard"
-      }
-    }
-  end
 end
 
 #################
