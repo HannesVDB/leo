@@ -55,7 +55,9 @@ end
 
 private_lane :check_code_style do
   # Check if the code is according to our coding guidelines.
-  swiftlint(strict: true)
+  swiftlint(strict: true,
+    ignore_exit_status: true
+  )
 end
 
 # Run the tests.
