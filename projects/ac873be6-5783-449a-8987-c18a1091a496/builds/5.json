@@ -1,12 +1,12 @@
 {
   "number": 5,
-  "status": "pending",
+  "status": "failure",
   "timestamp": 1524567694,
-  "duration": -1,
+  "duration": 28.158803,
   "sha": "b71ec4f14df2ba34d72ae5a8130bd5e79a7e1244",
   "artifacts": [
 
   ],
-  "description": null,
+  "description": "Build failed",
   "trigger": "manual"
 }
