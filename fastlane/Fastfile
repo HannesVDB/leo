@@ -45,7 +45,6 @@ lane :beta do
   build(
     configuration: 'Debug',
     export_options: export_options_for :debug
-
     )
   # When everything succeeds, commit and push the changes.
   commit_tag_and_push
@@ -105,8 +104,14 @@ private_lane :build do |options|
     workspace:            WORKSPACE,
     scheme:               SCHEME,
     configuration:        options[:configuration],
-    export_options:       options[:export_options]
-  )
+    export_options: {
+                          method: "enterprise",
+                          provisioningProfiles: {
+                                                  "com.example.bundleid" => "Provisioning Profile Name",
+                                                  "com.example.bundleid2" => "Provisioning Profile Name 2"
+                                                }
+                    }
+          )
 end
 
 
