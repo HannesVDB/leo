@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		05CE596838B712EA18880157 /* Pods_leo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2302E267720766A6AD7357AC /* Pods_leo.framework */; };
+		84320EB1208F3DB200DF3120 /* LeoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84320EB0208F3DB200DF3120 /* LeoTests.swift */; };
 		84675108208F316000EAA534 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84675107208F316000EAA534 /* AppDelegate.swift */; };
 		8467510A208F316000EAA534 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84675109208F316000EAA534 /* ViewController.swift */; };
 		8467510D208F316000EAA534 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8467510B208F316000EAA534 /* Main.storyboard */; };
@@ -15,10 +16,23 @@
 		84675112208F316100EAA534 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84675110208F316100EAA534 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		84320EB3208F3DB200DF3120 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 846750FC208F316000EAA534 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84675103208F316000EAA534;
+			remoteInfo = leo;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		136374A3A77DCC654F9E6FED /* Pods-leo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-leo.release.xcconfig"; path = "Pods/Target Support Files/Pods-leo/Pods-leo.release.xcconfig"; sourceTree = "<group>"; };
 		2302E267720766A6AD7357AC /* Pods_leo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_leo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4221C99A4D9BE88C055A5B4F /* Pods-leo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-leo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-leo/Pods-leo.debug.xcconfig"; sourceTree = "<group>"; };
+		84320EAE208F3DB100DF3120 /* LeoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LeoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		84320EB0208F3DB200DF3120 /* LeoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeoTests.swift; sourceTree = "<group>"; };
+		84320EB2208F3DB200DF3120 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84675104208F316000EAA534 /* leo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = leo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84675107208F316000EAA534 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84675109208F316000EAA534 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,6 +43,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		84320EAB208F3DB100DF3120 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		84675101208F316000EAA534 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -48,10 +69,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		84320EAF208F3DB200DF3120 /* LeoTests */ = {
+			isa = PBXGroup;
+			children = (
+				84320EB0208F3DB200DF3120 /* LeoTests.swift */,
+				84320EB2208F3DB200DF3120 /* Info.plist */,
+			);
+			path = LeoTests;
+			sourceTree = "<group>";
+		};
 		846750FB208F316000EAA534 = {
 			isa = PBXGroup;
 			children = (
 				84675106208F316000EAA534 /* leo */,
+				84320EAF208F3DB200DF3120 /* LeoTests */,
 				84675105208F316000EAA534 /* Products */,
 				DD8A74965E14198D9E138D19 /* Pods */,
 				4F03765CFFDC8236F8283A3B /* Frameworks */,
@@ -62,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				84675104208F316000EAA534 /* leo.app */,
+				84320EAE208F3DB100DF3120 /* LeoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -91,6 +123,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		84320EAD208F3DB100DF3120 /* LeoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84320EB7208F3DB200DF3120 /* Build configuration list for PBXNativeTarget "LeoTests" */;
+			buildPhases = (
+				84320EAA208F3DB100DF3120 /* Sources */,
+				84320EAB208F3DB100DF3120 /* Frameworks */,
+				84320EAC208F3DB100DF3120 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				84320EB4208F3DB200DF3120 /* PBXTargetDependency */,
+			);
+			name = LeoTests;
+			productName = LeoTests;
+			productReference = 84320EAE208F3DB100DF3120 /* LeoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		84675103208F316000EAA534 /* leo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84675116208F316100EAA534 /* Build configuration list for PBXNativeTarget "leo" */;
@@ -121,6 +171,10 @@
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = iCapps;
 				TargetAttributes = {
+					84320EAD208F3DB100DF3120 = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = 84675103208F316000EAA534;
+					};
 					84675103208F316000EAA534 = {
 						CreatedOnToolsVersion = 9.3;
 					};
@@ -140,11 +194,19 @@
 			projectRoot = "";
 			targets = (
 				84675103208F316000EAA534 /* leo */,
+				84320EAD208F3DB100DF3120 /* LeoTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		84320EAC208F3DB100DF3120 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		84675102208F316000EAA534 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -214,6 +276,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		84320EAA208F3DB100DF3120 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84320EB1208F3DB200DF3120 /* LeoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		84675100208F316000EAA534 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -224,6 +294,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		84320EB4208F3DB200DF3120 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84675103208F316000EAA534 /* leo */;
+			targetProxy = 84320EB3208F3DB200DF3120 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		8467510B208F316000EAA534 /* Main.storyboard */ = {
@@ -245,6 +323,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		84320EB5208F3DB200DF3120 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FAJTRUZ6J9;
+				INFOPLIST_FILE = LeoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.icapps.LeoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/leo.app/leo";
+			};
+			name = Debug;
+		};
+		84320EB6208F3DB200DF3120 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FAJTRUZ6J9;
+				INFOPLIST_FILE = LeoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.icapps.LeoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/leo.app/leo";
+			};
+			name = Release;
+		};
 		84675114208F316100EAA534 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -367,7 +485,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FAJTRUZ6J9;
 				INFOPLIST_FILE = leo/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.icapps.leo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -383,7 +504,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FAJTRUZ6J9;
 				INFOPLIST_FILE = leo/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.icapps.leo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -394,6 +518,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		84320EB7208F3DB200DF3120 /* Build configuration list for PBXNativeTarget "LeoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84320EB5208F3DB200DF3120 /* Debug */,
+				84320EB6208F3DB200DF3120 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		846750FF208F316000EAA534 /* Build configuration list for PBXProject "leo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
