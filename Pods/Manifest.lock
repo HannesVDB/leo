@@ -1,4 +1,12 @@
 PODS:
+  - AppCenter (1.6.0):
+    - AppCenter/Analytics (= 1.6.0)
+    - AppCenter/Crashes (= 1.6.0)
+  - AppCenter/Analytics (1.6.0):
+    - AppCenter/Core
+  - AppCenter/Core (1.6.0)
+  - AppCenter/Crashes (1.6.0):
+    - AppCenter/Core
   - Firebase/Core (4.13.0):
     - FirebaseAnalytics (= 4.2.0)
     - FirebaseCore (= 4.0.20)
@@ -21,9 +29,11 @@ PODS:
   - nanopb/encode (0.3.8)
 
 DEPENDENCIES:
+  - AppCenter
   - Firebase/Core
 
 SPEC CHECKSUMS:
+  AppCenter: 05e11ff99d3224131363abb61830172f5f28e53e
   Firebase: 5ec5e863d269d82d66b4bf56856726f8fb8f0fb3
   FirebaseAnalytics: 7ef69e76a5142f643aeb47c780e1cdce4e23632e
   FirebaseCore: 90cb1c53d69b556f112a1bf72b5fcfaad7650790
@@ -31,6 +41,6 @@ SPEC CHECKSUMS:
   GoogleToolboxForMac: 2501e2ad72a52eb3dfe7bd9aee7dad11b858bd20
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
 
-PODFILE CHECKSUM: 3fd7f3fd4e5af9049c1a779901eae2aea292b2de
+PODFILE CHECKSUM: 78f30dd769b981cffa41e56f168075b689486f81
 
 COCOAPODS: 1.4.0

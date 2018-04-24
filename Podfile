@@ -7,5 +7,6 @@ target 'leo' do
 
   # Pods for leo
   pod 'Firebase/Core'
-  
+  pod 'AppCenter'
+
 end
