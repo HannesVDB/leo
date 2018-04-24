@@ -1,12 +1,35 @@
 {
   "number": 7,
-  "status": "pending",
+  "status": "success",
   "timestamp": 1524566121,
-  "duration": -1,
+  "duration": 83.512561,
   "sha": "99d8a2063da303751f6d596f2840e20fe2e1f111",
   "artifacts": [
-
+    {
+      "type": "fastlane.verbose.log",
+      "reference": "e78cd518-3a55-4061-9920-04575963ff69/7/fastlane.verbose.log/fastlane.verbose.log",
+      "provider": {
+        "class_name": "FastlaneCI::LocalArtifactProvider"
+      },
+      "id": "360a5392-08ed-4fe5-9fcd-15b7cb4022c4"
+    },
+    {
+      "type": "fastlane.log",
+      "reference": "e78cd518-3a55-4061-9920-04575963ff69/7/fastlane.log/fastlane.log",
+      "provider": {
+        "class_name": "FastlaneCI::LocalArtifactProvider"
+      },
+      "id": "52cf8df6-0fff-4f26-8f76-8be1690f1a74"
+    },
+    {
+      "type": "SCAN_DERIVED_DATA_PATH",
+      "reference": "e78cd518-3a55-4061-9920-04575963ff69/7/SCAN_DERIVED_DATA_PATH/leo-agyfpmjmwqghqvggtlxzfzljbxeq",
+      "provider": {
+        "class_name": "FastlaneCI::LocalArtifactProvider"
+      },
+      "id": "f644ffca-7830-4510-93f0-c72c2986ef5d"
+    }
   ],
-  "description": null,
+  "description": "All green",
   "trigger": "manual"
 }
