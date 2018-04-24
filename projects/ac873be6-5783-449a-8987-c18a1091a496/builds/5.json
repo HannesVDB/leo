@@ -1,0 +1,12 @@
+{
+  "number": 5,
+  "status": "failure",
+  "timestamp": 1524567694,
+  "duration": 28.158803,
+  "sha": "b71ec4f14df2ba34d72ae5a8130bd5e79a7e1244",
+  "artifacts": [
+
+  ],
+  "description": "Build failed",
+  "trigger": "manual"
+}
