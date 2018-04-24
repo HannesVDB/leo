@@ -1,0 +1,124 @@
+# Don't generate README files.
+skip_docs
+
+# Clear derived data folder
+clear_derived_data if is_ci?
+
+#####################
+### CONFIGURATION ###
+#####################
+
+# Project configuration.
+WORKSPACE = 'leo.xcworkspace'
+PROJECT =   'leo.xcodeproj'
+SCHEME =    'leo'
+
+# TestFlight configuration.
+TESTFLIGHT_IDENTIFIER = 'com.icapps.leo'
+
+####################
+### PUBLIC LANES ###
+####################
+
+# This lane is used for checking if your pull request's code is according to our
+# coding guidelines and that the application's tests run.
+lane :pr do
+  # Check the coding guidelines.
+  check_code_style
+  # Run the tests.
+  test
+  # Run the code coverage generation.
+  run_coverage
+end
+
+# The beta lane deploys the appication to HockeyApp but prior to deploying there
+# are some other tasks executed like updating translations, incrementing the
+# build number...
+lane :beta do
+  # Run the tests.
+  test
+  # We reset the git repository because the tests could update some files.
+  reset_git_repo force: true
+  # We increment the build number without commiting.
+  increment_build_number
+  # Build the application with the given configuration.
+  build(
+    configuration: 'Debug',
+    export_options: export_options_for :beta
+  )
+  # When everything succeeds, commit and push the changes.
+  commit_tag_and_push
+end
+
+#########################
+### 🔑  PRIVATE LANES ###
+#########################
+
+private_lane :check_code_style do
+  # Check if the code is according to our coding guidelines.
+  swiftlint(strict: true)
+end
+
+# Run the tests.
+private_lane :test do |options|
+  run_tests(
+    workspace:     WORKSPACE,
+    scheme:        SCHEME,
+    clean:         true,
+    configuration: 'Debug',
+    device:        'iPad Air 2'
+  )
+end
+
+# Create code coverage reports. We ignore some pods because otherwise we get an
+# incorrect coverage overview.
+private_lane :run_coverage do
+  xcov(
+    workspace:        WORKSPACE,
+    scheme:           SCHEME,
+    exclude_targets:  %w(
+      Stella.framework
+      Nimble.framework
+      Quick.framework
+    ).join(', ')
+  )
+end
+
+# Commit the version bump and tag this commit. When this succeeds we push the
+# changes to the origin.
+private_lane :commit_tag_and_push do
+  # Persist the git changes.
+  commit_version_bump(
+    force:     true,
+    xcodeproj: PROJECT
+  )
+  add_git_tag
+  push_to_git_remote
+end
+
+# Build application
+private_lane :build do |options|
+  build_app(
+    workspace:            WORKSPACE,
+    scheme:               SCHEME,
+    configuration:        options[:configuration],
+    export_options:       options[:export_options]
+  )
+end
+
+
+#################
+### CALLBACKS ###
+#################
+
+# Post a notification to Slack every time a lane was successful.
+after_all do |lane|
+  next unless is_ci?
+  clean_build_artifacts
+end
+
+# When an error occurs we post a failure notification to Slack.
+error do |lane, exception|
+  next unless is_ci?
+  clean_build_artifacts
+end
