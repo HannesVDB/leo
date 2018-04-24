@@ -484,7 +484,7 @@
 			baseConfigurationReference = 4221C99A4D9BE88C055A5B4F /* Pods-leo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = FAJTRUZ6J9;
 				INFOPLIST_FILE = leo/Info.plist;
@@ -494,6 +494,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.icapps.leo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "282ceebe-425e-4e85-86bc-2995c61aa870";
+				PROVISIONING_PROFILE_SPECIFIER = "iOS Development - Wildcard";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -504,7 +506,7 @@
 			baseConfigurationReference = 136374A3A77DCC654F9E6FED /* Pods-leo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = FAJTRUZ6J9;
 				INFOPLIST_FILE = leo/Info.plist;
@@ -514,6 +516,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.icapps.leo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "282ceebe-425e-4e85-86bc-2995c61aa870";
+				PROVISIONING_PROFILE_SPECIFIER = "iOS Development - Wildcard";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
