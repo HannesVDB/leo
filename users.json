@@ -1,0 +1,18 @@
+[
+  {
+    "id": "6017710e-3425-4dbe-8441-5353c9b5680e",
+    "email": "hannes.van.den.berghe+ci@live.be",
+    "password_hash": "$2a$10$z6jDq2j/GiKxahTIyBGlx.qYHxbKBSKawMPjkkCh4RZMuEajQgot2",
+    "provider_credentials": [
+      {
+        "id": "e79e796b-ce17-4cda-ad61-1b07b9c4d8b9",
+        "email": "hannes.van.den.berghe@live.be",
+        "full_name": "Initial Onboarding User credentials",
+        "provider_name": "GitHub",
+        "type": "github",
+        "remote_host": "github.com",
+        "encrypted_api_token": "D1WAYCJmvBGbKmILxliirFBpSFh6yra3Z86OZ9D1/eSr/8g1yYU952C1GPFV\nybRKDUn3a9DhPJyvTyeHX2i0Jg==\n"
+      }
+    ]
+  }
+]
