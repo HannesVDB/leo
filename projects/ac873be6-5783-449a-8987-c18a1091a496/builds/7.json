@@ -1,0 +1,12 @@
+{
+  "number": 7,
+  "status": "pending",
+  "timestamp": 1524568214,
+  "duration": -1,
+  "sha": "b9dab9b34610418b81c97dd735db00c084625279",
+  "artifacts": [
+
+  ],
+  "description": null,
+  "trigger": "manual"
+}
