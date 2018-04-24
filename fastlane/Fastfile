@@ -43,9 +43,8 @@ lane :beta do
   increment_build_number
   # Build the application with the given configuration.
   build(
-    configuration: 'Debug',
-    export_options: export_options_for :beta
-  )
+    configuration: 'Debug'
+    )
   # When everything succeeds, commit and push the changes.
   commit_tag_and_push
 end
